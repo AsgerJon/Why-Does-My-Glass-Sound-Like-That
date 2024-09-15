@@ -31,13 +31,6 @@ bin/
 # fabric
 
 run/
-logs/
-saves/
-usercache.json
-config/
-
-mods/
-options.txt
 
 # java
 
@@ -45,4 +38,3 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
-*.dat

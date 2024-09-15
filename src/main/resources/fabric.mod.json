@@ -1,33 +1,38 @@
 {
 	"schemaVersion": 1,
-	"id": "whydoesmyglasssoundlikethat",
+	"id": "wdmgslt",
 	"version": "${version}",
-	"name": "Why Does My glass Sound Like That",
-	"description": "Makes it so when you break glass with a silk touch pickaxe it wont break your ear drums",
+	"name": "Why Does My Glass Sound Like That",
+	"description": "This mod stops the glass sound from breaking your eardrums when you have silk touch.",
 	"authors": [
 		"IAmThePerson"
 	],
 	"contact": {
-		"homepage": "https://persn.dev/"
+		"homepage": "https://persn.dev/",
+		"sources": "https://github.com/spjoes/Why-Does-My-Glass-Sound-Like-That"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/whydoesmyglasssoundlikethat/icon.png",
+	"icon": "assets/wdmgslt/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.split.whydoesmyglasssoundlikethat.WDMGSLT"
+			"dev.persn.WDMGSLT"
+		],
+		"client": [
+			"dev.persn.WDMGSLTClient"
 		]
 	},
 	"mixins": [
-		"whydoesmyglasssoundlikethat.mixins.json"
+		"wdmgslt.mixins.json",
+		{
+			"config": "wdmgslt.client.mixins.json",
+			"environment": "client"
+		}
 	],
 	"depends": {
-		"fabricloader": ">=0.14.22",
-		"minecraft": ">=1.20",
-		"java": ">=17",
-		"fabric": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
 	}
 }

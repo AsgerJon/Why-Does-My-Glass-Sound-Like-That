@@ -1,0 +1,11 @@
+{
+    "silktouch_glass_break": {
+      "sounds": [
+        "wdmgslt:silktouch_break1",
+        "wdmgslt:silktouch_break2",
+        "wdmgslt:silktouch_break3",
+        "wdmgslt:silktouch_break4"
+      ],
+      "subtitle": "subtitles.block.generic.break"
+    }
+  }
