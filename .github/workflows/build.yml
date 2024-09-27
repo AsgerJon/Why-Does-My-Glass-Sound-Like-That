@@ -4,8 +4,8 @@
 # against bad commits.
 
 name: build
-on: [pull_request, push]
-
+on:
+  workflow_dispatch:
 jobs:
   build:
     strategy:
@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: ${{ matrix.java }}
-          distribution: 'microsoft'
+          distribution: 'adopt'
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - name: build
